@@ -1,0 +1,101 @@
+//Create the txt file for the homework:
+
+doom@MDB~week1$ mkdir the\ cli\ challenge
+doom@MDB~week1$ cd the\ cli\ challenge/
+doom@MDB~the cli challenge$ touch cli\ challenge.txt
+
+Answer 1:
+//create a hidden file or folder:
+
+doom@MDB~the cli challenge$ echo 'this is hiddenfile'> .hidden
+
+// make sure if its created first way:
+
+doom@MDB~the cli challenge$ ls -A
+.hidden			cli challenge.txt
+
+// make sure if its created second way:
+doom@MDB~the cli challenge$ ls -a
+.			.hidden
+..			cli challenge.txt
+
+//display the file in the CLI
+doom@MDB~the cli challenge$ cat .hidden
+this is hiddenfile
+
+Answer 2:
+//create multiple nested directories:
+
+doom@MDB~the cli challenge$ mkdir -p parent/child1/child2/child3/child4/child5
+
+Answer 3:
+//append a message to a file, without a newline character:
+
+doom@MDB~the cli challenge$ echo 'this is first line'> message.txt //add first line
+
+doom@MDB~the cli challenge$ cat message.txt. // display it
+this is first line
+
+doom@MDB~the cli challenge$ echo 'this is second line then:)'>> message.txt //add second line
+
+doom@MDB~the cli challenge$ cat message.txt  // display them
+this is first line
+this is second line then:)
+
+//four groups of students:
+doom@MDB~the cli challenge$ mkdir four\ groups\ of\ students     // create directory for groups files
+doom@MDB~the cli challenge$ cd four\ groups\ of\ students/
+
+//Create group1:
+doom@MDB~four groups of students$ echo 'Hanbing
+> Dima
+> Wesam
+> Anwar' > group1.txt
+
+//Create group2:
+doom@MDB~four groups of students$ echo 'Amina
+> Naji
+> Hani
+> Ramzi' > group2.txt
+
+//Create group3:
+doom@MDB~four groups of students$ echo 'Ali
+> Ibrahem
+> Abdulkadir
+> Abuzer' > group3.txt
+
+//Create group4:
+doom@MDB~four groups of students$ echo 'Ammar
+> Ahmet Yasin
+> Mahmoud
+> Jalal' > group4.txt
+
+//list the files
+doom@MDB~four groups of students$ ls
+group1.txt	group3.txt
+group2.txt	group4.txt
+
+//display groups:
+doom@MDB~four groups of students$ cat group1.txt
+Hanbing
+Dima
+Wesam
+Anwar
+
+doom@MDB~four groups of students$ cat group2.txt
+Amina
+Naji
+Hani
+Ramzi
+
+doom@MDB~four groups of students$ cat group3.txt
+Ali
+Ibrahem
+Abdulkadir
+Abuzer
+
+doom@MDB~four groups of students$ cat group4.txt
+Ammar
+Ahmet Yasin
+Mahmoud
+Jalal

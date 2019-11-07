@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  background: #444;
+  font-family: 'Cabin', sans-serif;
+}
+
+/*---------------h for all sections___________*/
+h1,
+h2 {
+  background: #444;
+}
+h3 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 28px;
+}
+.firstHead {
+  padding-left: 80px;
+  font-size: 3rem;
+}
+.headerAll {
+  padding-left: 80px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.text-secondary {
+  color: #eece1a;
+}
+/*---------------icons and all <a>tags--------------*/
+
+/*animation and position for icons*/
+
+.icons {
+  position: fixed;
+  z-index: 10;
+  animation-name: myDancingIcon;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  /* animation-direction: alternate; */
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+/* make it move*/
+@keyframes myDancingIcon {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 95%;
+    top: 0px;
+  }
+  50% {
+    left: 95%;
+    top: 250px;
+  }
+  75% {
+    left: 0px;
+    top: 250px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.icons a {
+  padding: 1.5rem;
+  display: block;
+}
+.icons a:hover {
+  color: #eece1a;
+  transition: all 0.5s ease-out;
+}
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #eece1a;
+  transition: all 0.5s ease-out;
+}
+/*------------------------Start Home header---------------------*/
+
+#home {
+  background: rgba(54, 52, 52, 0.8);
+  background-attachment: fixed;
+  min-height: calc(100vh - 60px);
+}
+
+/*after home set second background image under the background in home id*/
+#home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.9;
+  background: url('./images/homeBackGround.jpg');
+  background-position: center;
+  background-size: cover;
+}
+/*------------------------end Home header-----------------------*/
+
+/*------------------------Start about section----------------------------*/
+#about {
+  opacity: 0.6;
+  background: url('./images/aboutBackGround.jpg');
+  background-size: cover;
+  min-height: calc(100vh - 60px);
+}
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  padding: 4rem;
+  grid-template-areas: 'aboutImage aboutContent aboutContent aboutContent aboutContent';
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.aboutImage {
+  grid-area: aboutImage;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: #eece1a 3px solid;
+}
+
+h4 {
+  color: #eece1a;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.aboutContent {
+  font-size: 20px;
+  font-weight: bold;
+  grid-area: aboutContent;
+  color: black;
+  background: rgba(39, 33, 33, 0.8);
+  padding: 0.5rem;
+  border-bottom: 5px #eece1a solid;
+  color: #fff;
+  box-sizing: border-box;
+}
+.aboutTable th {
+  padding-left: 4rem;
+  color: #eece1a;
+}
+.aboutTable td {
+  padding-left: 6rem;
+  border-bottom: 2px solid #1d1c15;
+  color: #fff;
+}
+.aboutTable td:nth-child(1)::after {
+  content: '➻';
+  color: #eece1a;
+}
+.aboutTable td:nth-child(2)::after {
+  content: '❣';
+  color: #eece1a;
+}
+
+/*-------------------------------End About section-----------------------*/
+
+/*----------------------------Start Education section----------------------*/
+#Educ {
+  background: url(./images/educBackGround.jpg);
+  background-size: cover;
+  min-height: calc(100vh - 60px);
+  opacity: 0.6;
+}
+
+.ulStudy li {
+  padding: 0.2rem;
+  color: #fff;
+  display: block;
+  background: rgba(39, 33, 33, 0.8);
+  border-bottom: 5px #444 solid;
+}
+
+p {
+  padding-top: 15px;
+}
+
+.about-Educ {
+  padding: 4rem;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'educImage educContent allStudy allStudy';
+  grid-template-columns: repeat(4, 1fr);
+}
+.educImage {
+  grid-area: educImage;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: #eece1a 3px solid;
+}
+
+.educContent {
+  font-size: 20px;
+  grid-area: educContent;
+  color: black;
+  background: rgba(39, 33, 33, 0.8);
+  padding: 0.5rem;
+  border-bottom: 5px #eece1a solid;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.allStudy {
+  font-size: 20px;
+  grid-area: allStudy;
+  background: rgba(39, 33, 33, 0.8);
+  padding: 0.5rem;
+  border-bottom: 5px #eece1a solid;
+  color: #fff;
+}
+
+/*-----------------------End Education section---------------*/
+
+/*-----------------------start work section---------------*/
+#work {
+  background-image: url(./images/workBackGround.jpg);
+  background-size: cover;
+  min-height: calc(100vh - 60px);
+  opacity: 0.6;
+}
+.about-Work {
+  padding: 1.5rem;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'workImage job job job';
+  grid-template-columns: repeat(4, 1fr);
+}
+.workImage {
+  grid-area: workImage;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: #eece1a 3px solid;
+}
+
+.job {
+  font-size: 20px;
+  grid-area: job;
+  background: rgba(39, 33, 33, 0.8);
+  padding: 0.5rem;
+  border-bottom: 5px #eece1a solid;
+  color: #fff;
+}
+.ulJobs li {
+  padding: 3px;
+  color: #fff;
+  display: block;
+  background: rgba(39, 33, 33, 0.8);
+  border-bottom: 5px #444 solid;
+}
+
+.theFoot {
+  text-align: center;
+  padding: 1rem;
+  background: rgb(59, 58, 58);
+  color: #ccc;
+  height: 60px;
+}
+/*-----------------------end work section---------------*/
+
+/*---------------mobile responsive--------------*/
+@media (max-width: 900px) {
+  .about-info {
+    grid-template-areas:
+      'aboutImage'
+      'aboutContent';
+    grid-template-columns: 1fr;
+  }
+  .about-Educ {
+    grid-template-areas:
+      'educImage'
+      'educContent'
+      'allStudy';
+    grid-template-columns: 1fr;
+  }
+  .about-Work {
+    grid-template-areas:
+      'workImage'
+      'job';
+    grid-template-columns: 1fr;
+  }
+  .aboutTable td,
+  .aboutTable th {
+    padding-left: 0;
+    padding-right: 0;
+    display: inline-table;
+  }
+  .aboutTable td:nth-child(1)::after {
+    content: '❝';
+  }
+  .aboutTable td:nth-child(2)::after {
+    content: '❞';
+  }
+}
+/* ------------------------end css----------------------*/
