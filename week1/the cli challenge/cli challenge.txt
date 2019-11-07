@@ -1,4 +1,4 @@
-//Create the txt file for the homework:
+//Create the text file for the homework:
 
 doom@MDB~week1$ mkdir the\ cli\ challenge
 doom@MDB~week1$ cd the\ cli\ challenge/
