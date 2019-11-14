@@ -6,8 +6,7 @@
 
 ## week2
 - [html&css homework week2](https://dima-kaddah.github.io/HYF-Module1-HTMLCSSGIT/week2/)
-- [CLI GIT exercise #1 week2](https://dima-kaddah.github.io/git_practice)
-- [also](https://github.com/Dima-Kaddah/git_practice)
+- [CLI GIT exercise #1 week2](https://github.com/Dima-Kaddah/git_practice)
 
 ## week3
 -
