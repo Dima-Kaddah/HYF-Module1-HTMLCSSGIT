@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Yeon+Sung&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: 'Yeon Sung', cursive; */
+  font-family: 'Big Shoulders Text', cursive;
+}
+body {
+  background-color: rgba(9, 81, 112, 0.5);
+  opacity: 0.8;
+}
+
+/*------ header & animation h1------*/
+header {
+  width: 100%;
+  min-height: 100vh;
+  background-color: hsla(204, 57%, 9%, 0.719);
+  text-align: center;
+  box-shadow: inset 0px 0px 30px 0px #ccc;
+}
+
+h1 {
+  letter-spacing: 30px;
+  font-size: 100px;
+  font-weight: 700;
+  color: black;
+  animation: text 4s 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*.css text after th h1 but before closetag of h1*/
+h1::after {
+  content: '.css';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  height: 5px;
+  background: rgb(2, 107, 97);
+  transform: translate(-50%, -50%);
+}
+
+@keyframes text {
+  0% {
+    color: rgb(66, 18, 18);
+  }
+  30% {
+    color: rgb(66, 18, 18);
+    letter-spacing: 90px;
+  }
+  60% {
+    letter-spacing: 60px;
+    color: darkcyan;
+  }
+
+  100% {
+    letter-spacing: 40px;
+    letter-spacing: 30px;
+  }
+}
+/*----------- End header & animation h1------------*/
+
+/*----------------- h2 & animation-----------------*/
+h2 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding: 50px;
+  background-color: #35424a;
+  animation: text2 1s ease-in infinite alternate;
+  box-shadow: inset 0px 0px 20px 0px #ccc;
+}
+@keyframes text2 {
+  0% {
+    box-shadow: inset 0px 0px 20px 0px #ccc;
+    color: darkcyan;
+  }
+  100% {
+    box-shadow: inset 0px 0px 40px 0px #ccc;
+    color: rgb(115, 155, 35);
+  }
+}
+/* rgb(2, 107, 97) */
+/*-----------------End h2 & animation-----------------*/
+
+/* -------------- grid floet saction -------------*/
+
+#grid-floats {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 66, 75, 0.5);
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: inset 0px 0px 20px 0px #ccc;
+}
+
+/* all grids imges & transition border-radius*/
+[src] {
+  width: 50%;
+  margin: auto;
+  display: block;
+  position: relative;
+  background-color: white;
+  transition-property: border-radius;
+  transition-duration: 1s;
+  border-radius: 50%;
+  border: 5px solid darkcyan;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+[src]:hover {
+  border-radius: 50% 50% 50% 0px;
+  border: 5px solid rgb(115, 155, 35);
+  opacity: 0.6;
+}
+
+/*floet all left*/
+#grid-floats li {
+  list-style: none;
+  /*20px is the margin size of left&right*/
+  width: calc((100% / 4) - 20px);
+  height: 500px;
+  margin: 10px;
+  background-color: rgba(45, 90, 110, 0.5);
+  float: left;
+  border-radius: 30px;
+}
+
+#grid-floats li:nth-child(1) {
+  width: calc((100% / 2) - 20px);
+}
+
+#grid-floats li::before {
+  content: '';
+  position: absolute;
+  background-color: rgba(14, 14, 13, 0.5);
+  width: calc((100% / 4) - 20px);
+  height: 500px;
+  opacity: 0.9;
+  border-radius: 30px;
+  box-shadow: inset 0px 0px 10px 0px #ccc;
+}
+
+#grid-floats li:nth-child(1)::before {
+  width: calc((100% / 2) - 20px);
+}
+
+/* just like i put clear div befor close tag of ul the defolt of the div block*/
+#grid-floats:last-of-type::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+/* -------------- grid floet saction -------------*/
+
+/*---------------- flex section--------------*/
+
+#grid-flex {
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(43, 66, 75, 0.5);
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: inset 0px 0px 20px 0px #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: initial;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#grid-flex li {
+  list-style: none;
+  /*20px is the margin size of left&right*/
+  width: calc((100% / 4) - 20px);
+  height: 500px;
+  margin: 10px;
+  background-color: rgba(45, 90, 110, 0.5);
+  border-radius: 30px;
+}
+
+#grid-flex li:nth-child(1) {
+  width: calc((100% / 2) - 20px);
+}
+
+#grid-flex li::before {
+  content: '';
+  position: absolute;
+  background-color: rgba(14, 14, 13, 0.5);
+  width: calc((100% / 4) - 20px);
+  height: 500px;
+  opacity: 0.9;
+  border-radius: 30px;
+  box-shadow: inset 0px 0px 20px 0px #ccc;
+}
+
+#grid-flex li:nth-child(1)::before {
+  width: calc((100% / 2) - 20px);
+}
+
+/*-------------in the grid boxes----------*/
+
+h3 {
+  padding: 10px;
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+}
+
+#grid-floats p {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: justify;
+  border-top: 5px solid darkcyan;
+  display: block;
+  color: black;
+  position: relative;
+  margin: 40px 10px 10px 10px;
+  contain: content;
+  animation: border 2s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+#grid-flex p {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: justify;
+  border-top: 5px solid darkcyan;
+  display: block;
+  color: black;
+  position: relative;
+  margin: 40px 10px 0px 10px;
+  animation: border 2s ease-in infinite alternate;
+}
+
+@keyframes border {
+  0% {
+    border-top: 5px solid darkcyan;
+  }
+  100% {
+    border-top: 5px solid rgb(115, 155, 35);
+  }
+}
+/* rgb(1, 91, 82) */
+/*---------------- End flex section--------------*/
+/*--------------- mobile style*----------------*/
+@media only screen and (max-width: 600px) {
+  h1 {
+    letter-spacing: 8px;
+  }
+  @keyframes text {
+    0% {
+      color: rgb(66, 18, 18);
+    }
+    30% {
+      color: rgb(66, 18, 18);
+      letter-spacing: 40px;
+    }
+    60% {
+      letter-spacing: 30px;
+      color: darkcyan;
+    }
+
+    100% {
+      letter-spacing: 18px;
+      letter-spacing: 8px;
+    }
+  }
+  #grid-floats li:nth-child(1) {
+    width: calc((100%) - 20px);
+  }
+  #grid-floats li {
+    width: calc((100% / 2) - 20px);
+    align-items: center;
+  }
+  #grid-floats {
+    margin: auto;
+  }
+
+  #grid-floats p {
+    font-size: 14.5px;
+  }
+  #grid-floats li::before {
+    width: calc((100% / 2) - 20px);
+  }
+
+  #grid-floats li:nth-child(1)::before {
+    width: calc((100%) - 20px);
+  }
+
+  #grid-flex li:nth-child(1) {
+    width: calc((100%) - 20px);
+  }
+  #grid-flex li {
+    width: calc((100% / 2) - 20px);
+  }
+  #grid-flex {
+    margin: auto;
+  }
+
+  #grid-flex p {
+    font-size: 14.5px;
+  }
+  #grid-flex li::before {
+    width: calc((100% / 2) - 20px);
+  }
+
+  #grid-flex li:nth-child(1)::before {
+    width: calc((100%) - 20px);
+  }
+}
+
+/*---------------------- Tablet Styles-----------------*/
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  #grid-floats li {
+    width: calc((100% / 3) - 20px);
+    align-items: center;
+    height: 530px;
+  }
+  #grid-floats li::before {
+    width: calc((100% / 3) - 20px);
+    height: 530px;
+  }
+  #grid-floats li:nth-child(1),
+  #grid-floats li:nth-child(2) {
+    width: calc((100% / 2) - 20px);
+    height: 450px;
+  }
+  #grid-floats li:nth-child(2)::before {
+    width: calc((100% / 2) - 20px);
+    height: 450px;
+  }
+  #grid-floats li:nth-child(1)::before {
+    width: calc((100% / 2) - 20px);
+    height: 450px;
+  }
+
+  #grid-flex li {
+    width: calc((100% / 3) - 20px);
+    align-items: center;
+    height: 530px;
+  }
+  #grid-flex li::before {
+    width: calc((100% / 3) - 20px);
+    height: 530px;
+  }
+  #grid-flex li:nth-child(1),
+  #grid-flex li:nth-child(2) {
+    width: calc((100% / 2) - 20px);
+    height: 450px;
+  }
+  #grid-flex li:nth-child(2)::before {
+    width: calc((100% / 2) - 20px);
+    height: 450px;
+  }
+  #grid-flex li:nth-child(1)::before {
+    width: calc((100% / 2) - 20px);
+    height: 450px;
+  }
+}
