@@ -74,9 +74,7 @@ h2 {
   animation: text2 1s ease-in infinite alternate;
   box-shadow: inset 0px 0px 20px 0px #ccc;
 }
-h2:hover {
-  font-size: 55px;
-}
+
 @keyframes text2 {
   0% {
     box-shadow: inset 0px 0px 20px 0px #ccc;
@@ -86,6 +84,10 @@ h2:hover {
     box-shadow: inset 0px 0px 40px 0px #ccc;
     color: rgb(115, 155, 35);
   }
+}
+
+h2:hover {
+  font-size: 55px;
 }
 
 /*-----------------End h2 & animation-----------------*/
@@ -112,10 +114,10 @@ h2:hover {
 /*floet all left*/
 #grid-floats li {
   list-style: none;
+  margin: 10px;
   /*20px is the margin size of left&right*/
   width: calc((100% / 4) - 20px);
   height: 500px;
-  margin: 10px;
   background-color: rgba(45, 90, 110, 0.5);
   float: left;
   border-radius: 30px;
@@ -152,7 +154,7 @@ h2:hover {
 #grid-floats li:nth-child(1)::before {
   width: calc((100% / 2) - 20px);
 }
-
+/* transition all li::before*/
 .grid-item:hover::before {
   cursor: pointer;
   transition: all 0.6s ease-in;
@@ -165,6 +167,7 @@ h2:hover {
   clear: both;
   display: block;
 }
+/* make last 3 li in center*/
 #grid-floats li:nth-last-child(3) {
   margin-left: 150px;
 }
@@ -183,7 +186,6 @@ h2:hover {
   box-shadow: inset 0px 0px 20px 0px #ccc;
   display: flex;
   flex-wrap: wrap;
-  flex-basis: initial;
   justify-content: space-around;
   align-items: center;
 }
@@ -206,8 +208,6 @@ h2:hover {
   height: 500px;
   margin: 10px;
   background-color: rgba(45, 90, 110, 0.5);
-  /* background-color: rgba(14, 14, 13, 0.5); */
-
   border-radius: 30px;
 }
 
@@ -236,39 +236,25 @@ h2:hover {
 h3 {
   padding: 20px;
   position: relative;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
   color: black;
   text-align: center;
 }
 
-#grid-floats p {
+p {
   font-size: 18px;
-  font-weight: 700;
-  padding: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  padding-top: 2rem;
   text-align: justify;
-  border-top: 5px solid darkcyan;
+  border-top: 5px solid rgb(0, 0, 0);
   display: block;
   color: black;
   position: relative;
   margin: 40px 10px 10px 10px;
   contain: content;
-  animation: border 2s infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in;
-}
-
-#grid-flex p {
-  font-size: 18px;
-  font-weight: 700;
-  padding: 1rem;
-  text-align: justify;
-  border-top: 5px solid darkcyan;
-  display: block;
-  color: black;
-  position: relative;
-  margin: 40px 10px 0px 10px;
-  animation: border 2s ease-in infinite alternate;
+  animation: border 1s ease-in infinite alternate;
 }
 
 @keyframes border {
@@ -279,7 +265,7 @@ h3 {
     border-top: 5px solid rgb(115, 155, 35);
   }
 }
-/* rgb(1, 91, 82) */
+
 /*---------------- End flex section--------------*/
 /*--------------- mobile style*----------------*/
 @media only screen and (max-width: 600px) {
@@ -304,52 +290,54 @@ h3 {
       letter-spacing: 8px;
     }
   }
-  #grid-floats li:nth-child(1) {
-    width: calc((100%) - 20px);
-  }
+  /*floet*/
   #grid-floats li {
     width: calc((100% / 2) - 20px);
     align-items: center;
   }
-  #grid-floats {
-    margin: auto;
-  }
-
-  #grid-floats p {
-    font-size: 14.5px;
-  }
   #grid-floats li::before {
     width: calc((100% / 2) - 20px);
   }
-
+  #grid-floats li:nth-child(1) {
+    width: calc((100%) - 20px);
+  }
   #grid-floats li:nth-child(1)::before {
     width: calc((100%) - 20px);
   }
-
-  #grid-flex li:nth-child(1) {
-    width: calc((100%) - 20px);
+  /* get back to 10px margin like all*/
+  #grid-floats li:nth-last-child(3) {
+    margin-left: 10px;
   }
+  /* to center all boxes*/
+  #grid-floats li:nth-last-child(1) {
+    margin-left: 26%;
+  }
+  /*flex*/
   #grid-flex li {
     width: calc((100% / 2) - 20px);
-  }
-  #grid-flex {
-    margin: auto;
-  }
-
-  #grid-flex p {
-    font-size: 14.5px;
   }
   #grid-flex li::before {
     width: calc((100% / 2) - 20px);
   }
-
+  #grid-flex li:nth-child(1) {
+    width: calc((100%) - 20px);
+  }
   #grid-flex li:nth-child(1)::before {
     width: calc((100%) - 20px);
+  }
+  /* content floet and flex*/
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    padding-top: 20px;
+    font-size: 17px;
   }
 }
 
 /*---------------------- Tablet Styles-----------------*/
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
+  /*floet*/
   #grid-floats li {
     width: calc((100% / 3) - 20px);
     align-items: center;
@@ -364,18 +352,16 @@ h3 {
     width: calc((100% / 2) - 20px);
     height: 450px;
   }
+  #grid-floats li:nth-child(1)::before,
   #grid-floats li:nth-child(2)::before {
     width: calc((100% / 2) - 20px);
     height: 450px;
   }
-  #grid-floats li:nth-child(1)::before {
-    width: calc((100% / 2) - 20px);
-    height: 450px;
-  }
+  /* get back to margin like all li margin*/
   #grid-floats li:nth-last-child(3) {
     margin-left: 10px;
   }
-
+  /*flex*/
   #grid-flex li {
     width: calc((100% / 3) - 20px);
     align-items: center;
@@ -390,11 +376,8 @@ h3 {
     width: calc((100% / 2) - 20px);
     height: 450px;
   }
+  #grid-flex li:nth-child(1)::before,
   #grid-flex li:nth-child(2)::before {
-    width: calc((100% / 2) - 20px);
-    height: 450px;
-  }
-  #grid-flex li:nth-child(1)::before {
     width: calc((100% / 2) - 20px);
     height: 450px;
   }
