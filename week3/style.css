@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+  color: #222;
+}
+/*---------- floet column background ----------*/
+body {
+  background-color: #ffff;
+  position: relative;
+  height: auto;
+}
+.column {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.075);
+  z-index: 0;
+}
+.column1 {
+  left: 16.66667%;
+}
+.column2 {
+  left: 33.33334%;
+}
+.column3 {
+  left: 50%;
+}
+.column4 {
+  left: 66.66667%;
+}
+.column5 {
+  left: 83.33334%;
+}
+#allContent {
+  padding-top: 40px;
+}
+/*-------------------------- header and web nav--------------*/
+
+header {
+  font-size: 100%;
+  padding: 20px;
+  width: 33.3334%;
+  align-content: center;
+  float: left;
+  top: 0;
+}
+.webNavbtn {
+  cursor: pointer;
+  padding: 20px;
+  float: right;
+  width: 66.6664%;
+  font-size: 1em;
+}
+.webNav {
+  display: block;
+  float: right;
+  max-width: 66.6664%;
+  padding: 0;
+  margin-top: 30px;
+  overflow: hidden;
+}
+.flexNav {
+  display: block;
+  column-count: 4;
+  width: 100%;
+  margin-right: 50px;
+  font-size: 1em;
+}
+/*---clear divs---*/
+.clearFloet {
+  display: block;
+  clear: both;
+}
+
+h1 {
+  font-weight: 700;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+.myNav {
+  display: none;
+}
+
+.mobileBtn {
+  position: absolute;
+  right: 20px;
+  top: 65px;
+  cursor: pointer;
+}
+.btn {
+  background-color: #222;
+  cursor: pointer;
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+}
+ul {
+  list-style: none;
+}
+h4 {
+  font-size: 15px;
+  padding-left: 10px;
+  font-weight: bold;
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+/*---------------- paragraph section -------------*/
+#pSection {
+  margin-top: 30px;
+  width: 100%;
+}
+.showCase {
+  float: left;
+  width: 33.3332%;
+  overflow: hidden;
+}
+.firtP {
+  float: left;
+  width: 66.6664%;
+  padding: 30px;
+  max-width: 700px;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  line-height: 20px;
+}
+
+/*-------------------- Start section photos -----------------*/
+.rowImage {
+  display: flex;
+  overflow: hidden;
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.phosArtic {
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 33.3334%;
+}
+.allImages {
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  margin-bottom: 0;
+  filter: grayscale(1);
+}
+[src] {
+  max-width: 100%;
+  overflow: hidden;
+}
+.mobileSections {
+  display: flex;
+  overflow: hidden;
+  align-self: flex-start;
+  align-items: baseline;
+}
+.phosArticMobile {
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 66.6667%;
+}
+.ptextHOver {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 60px;
+  padding-top: 10px;
+  padding-left: 10px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.allImages:hover,
+.allImages:hover .ptextHOver {
+  opacity: 0.9;
+  filter: grayscale(0);
+}
+/*-------------------- End section photos -----------------*/
+/*------------------foot paragraphs----------------*/
+.fousColumns li,
+.footContent h4 {
+  border-top: 1px solid rgba(0, 0, 0, 0.075);
+  padding: 10px 0;
+  font-size: 0.65rem;
+}
+.fousColumns li:nth-child(5) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+
+.footContent {
+  left: 20px;
+  padding: 20px;
+  font-size: 0.65rem;
+}
+
+.foot {
+  left: 20px;
+  padding: 20px;
+  margin-top: 10px;
+  color: #888;
+}
+
+.fousColumns li:nth-last-child(-n + 15) {
+  display: none;
+}
+
+.foot h4 {
+  font-size: 0.75rem;
+  padding-top: 5px;
+  color: #888;
+  margin-top: 10px;
+}
+.foot p,
+.foot a {
+  font-size: 0.65rem;
+  color: #888;
+}
+
+/*--------------mobile-----------*/
+@media only screen and (max-width: 800px) {
+  .rowImage {
+    display: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  header {
+    float: none;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .hideMobile {
+    display: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  .wiewMobile {
+    display: block;
+  }
+  .mobileMenu ul li {
+    list-style: none;
+    width: 100%;
+    display: block;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.075);
+    position: relative;
+    padding: 10px;
+  }
+  .mobileMenu ul:nth-last-child(1) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+  }
+  .showCase {
+    float: none;
+    width: 33.3332%;
+  }
+  .firtP {
+    float: none;
+    width: 100%;
+    padding: 20px;
+  }
+}
+/*--------web------------*/
+@media only screen and (min-width: 800px) {
+  .mobileMenu ul li {
+    list-style: none;
+    width: 100%;
+    display: block;
+    border: none;
+  }
+  .mobileBtn,
+  .mobileSections {
+    display: none;
+  }
+
+  .parentMenu1 {
+    width: 33.333%;
+    display: flex;
+    float: left;
+    justify-content: space-between;
+  }
+
+  .parentMenu1 div {
+    padding: 30px;
+    width: 100%;
+    margin: 10px;
+  }
+
+  ul li {
+    padding-bottom: 10px;
+  }
+
+  .fousColumns li,
+  .footContent h4,
+  .fousColumns li:nth-child(5) {
+    border: none;
+    padding: 5px 10px;
+  }
+
+  .footContent h4 {
+    padding-bottom: 15px;
+  }
+
+  .fousColumns {
+    column-count: 4;
+    width: 100%;
+  }
+
+  .footContent {
+    float: right;
+    width: 66.6664%;
+    padding-left: 20px;
+    font-size: 0.8rem;
+  }
+
+  .foot {
+    float: right;
+    width: 66.6664%;
+    left: 20px;
+    padding-left: 20px;
+    column-count: 4;
+    margin: 80px 0;
+    color: #888;
+  }
+
+  .fousColumns li:nth-last-child(-n + 15) {
+    display: block;
+  }
+  .foot p,
+  .foot h4 {
+    font-size: 0.75rem;
+    padding-top: 10px;
+    color: #888;
+    display: inline-block;
+  }
+}
+.openMenu {
+  display: block;
+}
+
+@media only screen and (min-width: 1400px) {
+  body {
+    width: 1400px;
+    margin: 0 auto;
+    border-left: 1px solid rgba(0, 0, 0, 0.075);
+    border-right: 1px solid rgba(0, 0, 0, 0.075);
+  }
+}
