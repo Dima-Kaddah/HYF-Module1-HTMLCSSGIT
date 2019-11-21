@@ -9,6 +9,6 @@
 - [CLI GIT exercise #1 week2](https://github.com/Dima-Kaddah/git_practice)
 
 ## week3
-- [html&css homework week3]()
+- [html&css homework week3](https://dima-kaddah.github.io/HYF-Module1-HTMLCSSGIT/week3/)
 - [CLI GIT animals repo week3](https://github.com/Dima-Kaddah/animals)
 
