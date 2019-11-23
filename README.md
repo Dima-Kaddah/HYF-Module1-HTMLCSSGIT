@@ -13,4 +13,4 @@
 - [CLI GIT animals repo week3](https://github.com/Dima-Kaddah/animals)
 
 ## More ex
-[html&css homework more ex](https://dima-kaddah.github.io/HYF-Module1-HTMLCSSGIT/more.ex/)
+[html&css more ex](https://dima-kaddah.github.io/HYF-Module1-HTMLCSSGIT/more.ex/)
